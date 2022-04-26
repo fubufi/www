@@ -1,0 +1,176 @@
+/******************************************************************************/
+/* App CSS */
+
+@font-face {
+  font-family: FubufiFont;
+  src:
+    local("Fubufi Font"),
+    local("Fubufi-Font"),
+    url("fonts/regular.ttf");
+}
+
+html, body {
+  --color-font: #1e8bd4;
+  --color-special: #1e8bd4;
+  --color-background: #0b0c0c;
+  --color-header: #0b0c0c;
+  --color-header-alpha: #0b0c0c;
+
+  margin: 0;
+  padding: 0;
+  height: 100%;
+
+  color: var(--color-font);
+  background: var(--color-background);
+  font-family: FubufiFont;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* #root level sibling for modal popups. */
+#modal {
+  position: absolute;
+  z-index: 999;
+}
+/* conditionally displayed item, blank screen, fullscreen etc. */
+.modal {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: -100vh;
+  left: 0;
+  display: flex;
+  background-color: #000000D0;
+  justify-content: center;
+  align-items: center;
+}
+/* modal body container */
+.modal-body {
+  max-width: 70%;
+  height: auto;
+  padding: 20px;
+  background-color: var(--color-background);
+}
+
+.error {
+  height: 100%;
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+/*
+ *  Common rules.
+ */
+
+.col {
+  display: flex;
+  flex-direction: row;
+}
+.grow {
+  flex-grow: 1;
+}
+.float {
+  padding: 4px;
+  background-color: #ecc60db0;
+}
+.underline {
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--color-header);
+  margin-bottom: 5px;
+}
+.spacer {
+  width: 30px;
+}
+.jumbotron {
+  margin-top: 30px;
+  width: 100%;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 23pt;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+ *  Header rules.
+ */
+.App-header {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  background-color: var(--color-header);
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.link,
+.App-header a {
+  margin: 20px;
+  color: var(--color-font);
+  cursor: pointer;
+  text-decoration: none;
+}
+.App-header a:visited {
+  color: var(--color-font);
+}
+
+.link, .link:visited {
+  color: var(--color-special);
+}
+
+.App-header a.isActive,
+.App-header a:hover {
+  color: var(--color-special);
+}
+.App-header .balance {
+  color: var(--color-font);
+  margin-right: 20px;
+}
+
+/*
+ *  Body spans rest of space.
+ */
+.App-body {
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.App-scroll {
+  width: 100%;
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+}
+
+/******************************************************************************/
+
+/*
+ *  Home
+ */
+
+.Home-main {
+  height: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
